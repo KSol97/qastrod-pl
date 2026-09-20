@@ -216,7 +216,7 @@
         + '</ul>'
         + '<div class="cta-row" style="margin-top:auto">'
         + '<button class="btn green" id="requiz">Losuj ponownie</button>'
-        + '<a class="btn ghost" href="piosenki-pilkarskie.html">Cały katalog</a></div></div></div>'
+        + '<a class="btn ghost" href="/piosenki-pilkarskie/">Cały katalog</a></div></div></div>'
         + '<div class="bench"><h4>Ławka rezerwowych</h4><p>Gdyby pierwszy wybór nie trafił.</p>'
         + '<div class="grid g3">' + alts.map(function(s){return card(s);}).join("") + '</div></div>';
       try{ elRes.scrollIntoView({behavior:"smooth", block:"start"}); }catch(err){}
