@@ -5,17 +5,24 @@ Skopiuj całą zawartość tego folderu do katalogu głównego domeny qastrod.pl
 (zwykle `public_html/` albo `www/`). Struktura musi zostać zachowana:
 
 ```
-index.html
-piosenki-pilkarskie.html
-... (51 pozostałych stron)
+index.html                      <- strona glowna, adres qastrod.pl
+piosenki-pilkarskie/index.html  <- adres qastrod.pl/piosenki-pilkarskie/
+... (51 pozostalych folderow)
+piosenki-pilkarskie.html        <- przekierowanie ze starego adresu
 assets/style.css
 assets/app.js
 assets/data.js
 assets/qastrod-logo.jpg
 assets/qastrod-mark.jpg
+CNAME
+.nojekyll
 sitemap.xml
 robots.txt
 ```
+
+Adresy sa czyste, bez koncowki .html. Kazda podstrona to folder z plikiem
+index.html w srodku. Pliki .html lezace obok to tylko przekierowania ze starych
+adresow, maja noindex i canonical na nowa wersje, wiec nie zaburzaja SEO.
 
 Strona jest w pełni statyczna: bez PHP, bez bazy danych, bez backendu.
 Działa na zwykłym hostingu, a także na Netlify, Vercel, Cloudflare Pages
@@ -36,7 +43,7 @@ i GitHub Pages (wystarczy przeciągnąć folder).
 **Strony główne**
 | Strona | Fraza |
 |---|---|
-| index.html | najlepsze piosenki piłkarskie |
+| / | najlepsze piosenki piłkarskie |
 | piosenki-pilkarskie.html | piosenki piłkarskie / piosenki o piłce nożnej |
 | najnowsze-piosenki-pilkarskie.html | najnowsze piosenki piłkarskie |
 | najlepsze-piosenki-pilkarskie.html | najlepsze piosenki piłkarskie ranking |
