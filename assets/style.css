@@ -907,3 +907,7 @@ a.game:hover{transform:translateY(-4px);border-color:var(--pitch);text-decoratio
 .gc-b h3{line-height:1}
 .gc,.gc:hover,.gc *{text-decoration:none!important}
 .gc-f{margin-bottom:14px}
+.home-games{padding:46px 0 20px}
+.home-gh{text-align:center;margin-bottom:26px}
+.home-gh h2{margin:0;font:400 clamp(38px,6vw,76px)/.95 var(--hd);text-transform:uppercase}
+.home-gh h2 em{font-style:normal;color:var(--pitch)}

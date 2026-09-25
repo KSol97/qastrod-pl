@@ -582,7 +582,7 @@ function render(){
     ctx.fillText(TOUCH?'STRZAŁ: kopnij piłkę · pełny pasek = następny strzał to SUPER':'Strzałki: bieg i skok · Spacja: strzał · pełny pasek = SUPERSTRZAŁ (pewny gol)',W/2,H-28);ctx.globalAlpha=1;ctx.textBaseline='alphabetic'}
 }
 var last=0;
-function frame(ts){var dt=Math.min(.033,(ts-last)/1000||0);last=ts;var ns=DEBUG?(window.__gkTS||1):1;for(var k=0;k<ns;k++)update(dt);render();requestAnimationFrame(frame)}
+function frame(ts){if(DEBUG&&window.__hold){requestAnimationFrame(frame);return}var dt=Math.min(.033,(ts-last)/1000||0);last=ts;var ns=DEBUG?(window.__gkTS||1):1;for(var k=0;k<ns;k++)update(dt);render();requestAnimationFrame(frame)}
 /* ---------- nakładki ---------- */
 var portraits={};
 function portrait(ix){if(portraits[ix])return portraits[ix];return portraits[ix]=portraitCanvas(ix).toDataURL()}
@@ -687,5 +687,5 @@ syncBar();
 showMenu();
 function boot(){requestAnimationFrame(function(ts){last=ts;requestAnimationFrame(frame)})}
 if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){portraits={};pcv={};if(S.st==='menu')showMenu();boot()},boot);else boot();
-if(DEBUG)window.__gk={S:S,SV:SV,startMatch:startMatch,endMatch:endMatch,save:save,keys:keys,update:update};
+if(DEBUG)window.__gk={S:S,SV:SV,startMatch:startMatch,endMatch:endMatch,save:save,keys:keys,update:update,render:render,cv:cv,givePk:givePk,doKick:doKick};
 })();

@@ -598,7 +598,7 @@ function render(){
   ctx.textBaseline='alphabetic';
 }
 var last=0;
-function frame(ts){var dt=Math.min(.033,(ts-last)/1000||0);last=ts;var ns=DEBUG?(window.__krTS||1):1;for(var k=0;k<ns;k++){update(dt);if(DEBUG&&window.__krBot&&S.st==='aim')botShoot()}render();requestAnimationFrame(frame)}
+function frame(ts){if(DEBUG&&window.__hold){requestAnimationFrame(frame);return}var dt=Math.min(.033,(ts-last)/1000||0);last=ts;var ns=DEBUG?(window.__krTS||1):1;for(var k=0;k<ns;k++){update(dt);if(DEBUG&&window.__krBot&&S.st==='aim')botShoot()}render();requestAnimationFrame(frame)}
 
 /* ---------- nakładki ---------- */
 var portraits={};
@@ -701,5 +701,5 @@ syncBar();
 showMenu();
 function boot(){requestAnimationFrame(function(ts){last=ts;requestAnimationFrame(frame)})}
 if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){portraits={};pcv={};if(S.st==='menu')showMenu();boot()},boot);else boot();
-if(DEBUG)window.__kr={S:S,SV:SV,startMatch:startMatch,save:save,update:update,diveTo:diveTo,botShoot:botShoot};
+if(DEBUG)window.__kr={S:S,SV:SV,startMatch:startMatch,save:save,update:update,diveTo:diveTo,botShoot:botShoot,render:render,cv:cv,lockAim:lockAim,stopMeter:stopMeter,nextKick:nextKick,planCpuShot:planCpuShot,planCpuKeeper:planCpuKeeper,startDive:startDive,gp:gp};
 })();

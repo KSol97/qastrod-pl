@@ -1154,7 +1154,7 @@ function render(){
   if(S.st!=='menu'&&!window.__noHud)drawHud(t);
 }
 var last=0;
-function frame(ts){
+function frame(ts){if(DEBUG&&window.__hold){requestAnimationFrame(frame);return}
   var dt=Math.min(.05,(ts-last)/1000||0);last=ts;
   var ns=DEBUG?(window.__ltTS||1):1;for(var k=0;k<ns;k++)update(dt);render();requestAnimationFrame(frame);
 }
@@ -1339,7 +1339,7 @@ showMenu();
 function boot(){requestAnimationFrame(function(ts){last=ts;requestAnimationFrame(frame)})}
 if(document.fonts&&document.fonts.ready)document.fonts.ready.then(boot,boot);else boot();
 
-if(DEBUG)window.__lt={S:S,SV:SV,hook:hook,startRun:startRun,endRun:endRun,fire:fire,useWhistle:useWhistle,startFever:startFever,legend:legendEvent,
+if(DEBUG)window.__lt={update:update,render:render,cv:cv,S:S,SV:SV,hook:hook,startRun:startRun,endRun:endRun,fire:fire,useWhistle:useWhistle,startFever:startFever,legend:legendEvent,
   aimAt:function(x,y){var a=Math.atan2(x-PIV.x,y-PIV.y);hook.a=a;hook.ph=Math.asin(clamp(a/1.24,-1,1))},
   freeze:function(){hook.ph=0;window.__ltFreeze=true},showCard:showCard,save:save};
 })();

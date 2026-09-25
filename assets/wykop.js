@@ -516,7 +516,7 @@ function render(){
   if(S.st!=='menu'&&!window.__noHud)drawHud();
 }
 var last=0;
-function frame(ts){var dt=Math.min(.05,(ts-last)/1000||0);last=ts;var ns=DEBUG?(window.__wkTS||1):1;for(var k=0;k<ns;k++)update(dt);render();requestAnimationFrame(frame)}
+function frame(ts){if(DEBUG&&window.__hold){requestAnimationFrame(frame);return}var dt=Math.min(.05,(ts-last)/1000||0);last=ts;var ns=DEBUG?(window.__wkTS||1):1;for(var k=0;k<ns;k++)update(dt);render();requestAnimationFrame(frame)}
 
 /* ---------- nakładki ---------- */
 function showOv(h,cls){popEl.classList.remove('on');ov.className='lt-ov on '+(cls||'');ov.innerHTML='<div class="lt-panel">'+h+'</div>'}
@@ -604,5 +604,5 @@ syncBar();
 showMenu();
 function boot(){requestAnimationFrame(function(ts){last=ts;requestAnimationFrame(frame)})}
 if(document.fonts&&document.fonts.ready)document.fonts.ready.then(boot,boot);else boot();
-if(DEBUG)window.__wk={S:S,SV:SV,newRun:newRun,tapInput:tapInput,endRun:endRun,save:save,update:update};
+if(DEBUG)window.__wk={S:S,SV:SV,newRun:newRun,tapInput:tapInput,endRun:endRun,save:save,update:update,render:render,cv:cv,podbicie:podbicie,launch:launch};
 })();
