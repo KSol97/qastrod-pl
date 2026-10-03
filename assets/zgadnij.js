@@ -52,6 +52,7 @@ function resumeSong(){try{if(YTP&&YTP.playVideo)YTP.playVideo()}catch(e){}}
 var S={st:'menu',round:0,score:0,streak:0,best:0,correct:0,q:null,used:{},timer:0,left:0,raf:0,history:[]};
 function pool(round){var lim=round<3?30:round<7?90:ALL.length;return ALL.filter(function(s){return (s.r||999)<=lim&&!S.used[s.i]})}
 function makeQ(){
+  if(DEBUG&&window.__zpNext){var F=window.__zpNext;window.__zpNext=null;var by=function(id){return ALL.filter(function(x){return x.i===id})[0]};var o=F.opts.map(by);return {ans:by(F.ans),opts:o,clip:F.clip||8,start:50,tries:0}}
   var p=pool(S.round);if(!p.length)p=ALL.filter(function(s){return !S.used[s.i]});
   var ans=p[Math.floor(Math.random()*p.length)];S.used[ans.i]=1;
   var cat=(ans.c||[])[0],ent=(ans.e||[])[0];
