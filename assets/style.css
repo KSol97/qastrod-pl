@@ -1400,3 +1400,5 @@ html.ss-lock,html.ss-lock body{overflow:hidden;overscroll-behavior:none}
 .ss-stake{margin:0 0 6px;font-size:13px;color:#cbd8f0;line-height:1.35}
 .ss-stat{margin:0 0 8px;font-size:13px;color:#a9bee3;padding:7px 10px;border-radius:10px;background:rgba(255,255,255,.05)}.ss-stat b{color:#fff}
 .ss-stat em{font-style:normal;font-weight:800}.ss-stat em.z-up{color:#16d97d}.ss-stat em.z-po{color:#ffb020}.ss-stat em.z-dn{color:#ff6b81}
+
+.home-more{display:flex;justify-content:center;margin-top:30px}.home-more .btn{font-size:17px;padding:15px 30px;text-transform:uppercase;letter-spacing:.04em}

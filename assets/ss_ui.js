@@ -37,7 +37,7 @@ function header(){var s=S();
  fsBtn()+'</header>'}
 function nav(){return '<nav class="ss-nav">'+TABS.map(function(t){return '<button class="'+(UI.tab===t[0]?'on':'')+'" data-a="tab" data-v="'+t[0]+'"><i>'+t[1]+'</i><span>'+t[2]+'</span>'+(t[0]==='media'&&UI.mediaNew?'<b class="ss-dot"></b>':'')+'</button>'}).join('')+'</nav>'}
 
-function norm(sv){if(!sv)return sv;if(sv.phase==='match'&&!UI.MV)sv.phase='pre';if(sv.phase==='press')sv.phase='pre';if(sv.phase==='post'&&!UI.post){var w0=sv.win;sv.newSong=null;w0.mi++;if(w0.mi<w0.matches.length)sv.phase='pre';else{MM.finishWindow();sv.phase='wrap'}X.save()}if(sv.phase==='callup'&&!UI.callReady)prepCall();return sv}
+function norm(sv){if(!sv)return sv;if(sv.phase==='match'&&!UI.MV)sv.phase='pre';if(sv.phase==='press'&&!(UI.qs&&UI.qs[UI.pq])){sv.phase='pre';ensureXI()}if(sv.phase==='post'&&!UI.post){var w0=sv.win;sv.newSong=null;w0.mi++;if(w0.mi<w0.matches.length)sv.phase='pre';else{MM.finishWindow();sv.phase='wrap'}X.save()}if(sv.phase==='callup'&&!UI.callReady)prepCall();return sv}
 function render(){var s=S();if(s)norm(s);
  if(!s){unmountMatch();app.className='ss-app st';app.innerHTML=startScreen();return}
  if(s.phase==='match'&&UI.MV){if(!UI.mm){app.className='ss-app inm';app.innerHTML=matchShell();UI.mm=1;mountMatch()}renderOv();return}
