@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Piłkarski Przekręt: darmowa gra piłkarska online w stylu GTA | Qastrod</title>
+<meta name="description" content="Zagraj za darmo w przeglądarce: otwarte miasto, piłka przy nodze, pościgi, mecze na orlikach i przekręt prezesa Barona do odkręcenia. Bez pobierania, 29 misji, 2 zakończenia.">
+<link rel="canonical" href="https://qastrod.pl/gra/pilkarski-przekret/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:site_name" content="Qastrod">
+<meta property="og:title" content="Piłkarski Przekręt: gra piłkarska w stylu GTA">
+<meta property="og:description" content="Otwarte miasto, mecze, pościgi i przekręt prezesa Barona. Graj za darmo w przeglądarce.">
+<meta property="og:url" content="https://qastrod.pl/gra/pilkarski-przekret/">
+<meta property="og:image" content="https://qastrod.pl/gra/pilkarski-przekret/og-1200x630.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#081226">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="/gra/pilkarski-przekret/okladka-1280x720.webp" fetchpriority="high">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/assets/style.css?v=b8a99761">
+<style>.pp-head{text-align:center;padding:30px 0 6px}
+.pp-head h1{margin:0;font:400 clamp(34px,5vw,62px)/1 var(--hd);text-transform:uppercase}
+.pp-head h1 em{font-style:normal;color:#ffcc33}
+.pp-head p{margin:14px auto 0;max-width:760px;color:var(--muted);font-size:18px;line-height:1.55}
+.game-box{position:relative;aspect-ratio:16/9;max-width:1280px;margin:22px auto 0;background:#0b0710;border-radius:18px;overflow:hidden;border:2px solid var(--line)}
+.game-box img{width:100%;height:100%;object-fit:cover;display:block}
+.game-box iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.game-box::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(11,7,16,.1) 30%,rgba(11,7,16,.55));pointer-events:none}
+.game-box.on{border-radius:0;border-color:transparent}
+.game-box.on::after{display:none}
+#playBtn{position:absolute;z-index:2;left:50%;top:50%;transform:translate(-50%,-50%);font:400 clamp(20px,3vw,32px)/1 var(--hd);letter-spacing:.04em;text-transform:uppercase;padding:20px 40px;border:0;border-radius:14px;background:#ffcc33;color:#111;cursor:pointer;box-shadow:0 7px 0 #b8860b,0 18px 40px rgba(0,0,0,.55);white-space:nowrap}
+#playBtn:hover{transform:translate(-50%,-46%);box-shadow:0 4px 0 #b8860b,0 12px 30px rgba(0,0,0,.55)}
+.game-note{margin:12px 0 0;text-align:center;color:var(--muted);font:600 15px var(--bd)}
+.game-mob{display:none;position:absolute;z-index:2;left:50%;top:50%;transform:translate(-50%,-50%);width:min(88%,460px);margin:0;padding:16px 18px;border-radius:14px;background:rgba(8,18,38,.9);border:2px solid #ffcc33;color:#fff;font:600 16px/1.45 var(--bd);text-align:center}
+.game-box.mob #playBtn,.game-box.mob+.game-note{display:none}
+.game-box.mob .game-mob{display:block}
+.pp-tools{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:14px 0 0}
+.pp-tools[hidden]{display:none}
+.pp-tools .btn{font-size:15px;padding:11px 18px}
+.pp-txt{max-width:820px}
+.pp-txt p{margin:0 0 14px;color:#d5e1f8;font-size:17.5px;line-height:1.65}
+.pp-txt p:last-child{margin-bottom:0}
+.pp-keys{width:100%;max-width:820px;border-collapse:collapse;margin-top:18px;background:var(--navy2);border:2px solid var(--line);border-radius:14px;overflow:hidden;font-size:16px}
+.pp-keys th,.pp-keys td{padding:11px 16px;text-align:left;border-bottom:1px solid var(--line);line-height:1.35}
+.pp-keys thead th{font:400 17px var(--hd);letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:rgba(35,65,126,.28)}
+.pp-keys tbody tr:last-child th,.pp-keys tbody tr:last-child td{border-bottom:0}
+.pp-keys tbody th{white-space:nowrap;font-weight:700;color:#ffcc33;width:1%}
+.pp-keys td{color:#d5e1f8}
+.pp-radio{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:20px}
+.pp-st{background:var(--card);border:2px solid var(--line);border-radius:var(--r);padding:18px}
+.pp-st h3{margin:0;font:400 23px/1.1 var(--hd);text-transform:uppercase;letter-spacing:.02em;color:#ffcc33}
+.pp-st small{display:block;margin:4px 0 10px;color:var(--muted);font-size:14.5px;line-height:1.35}
+.pp-st ul{list-style:none;margin:0;padding:0}
+.pp-st li{padding:7px 0;border-top:1px solid var(--line);font-size:15px;line-height:1.35}
+.pp-st a{color:#fff}
+.pp-req{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.pp-req li{background:var(--card);border:2px solid var(--line);border-left:6px solid #ffcc33;border-radius:13px;padding:16px 18px;color:#d5e1f8;font-size:16px;line-height:1.45}
+.pp-req b{display:block;color:#fff;font-size:17px;margin-bottom:3px}
+.pp-faq{max-width:820px;margin-top:6px}
+.pp-faq h3{margin:20px 0 4px;font-size:19px;line-height:1.3;color:#fff}
+.pp-faq p{margin:0;color:#d5e1f8;font-size:17px;line-height:1.55}
+.pp-shots{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:20px}
+.pp-shots img{width:100%;height:auto;border-radius:14px;border:2px solid var(--line)}
+@media(max-width:1000px){.pp-radio{grid-template-columns:repeat(2,1fr)}.pp-req{grid-template-columns:1fr}}
+@media(max-width:620px){.pp-radio,.pp-shots{grid-template-columns:1fr}.pp-keys{font-size:14.5px}.pp-keys th,.pp-keys td{padding:9px 10px}.pp-keys tbody th{white-space:normal}.pp-head{padding-top:20px}.game-box{border-radius:12px}}</style>
+<link rel="icon" href="/assets/qastrod-mark.jpg">
+<link rel="apple-touch-icon" href="/assets/qastrod-logo.jpg">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebSite", "@id": "https://qastrod.pl/#website", "url": "https://qastrod.pl/", "name": "Qastrod", "inLanguage": "pl-PL", "description": "Największa polska kolekcja piosenek piłkarskich. Ponad 300 autorskich utworów o futbolu, tworzonych od 2014 roku.", "publisher": {"@id": "https://qastrod.pl/#org"}, "potentialAction": {"@type": "SearchAction", "target": {"@type": "EntryPoint", "urlTemplate": "https://qastrod.pl/piosenki-pilkarskie?q={search_term_string}"}, "query-input": "required name=search_term_string"}}, {"@context": "https://schema.org", "@type": "Organization", "@id": "https://qastrod.pl/#org", "name": "Qastrod", "url": "https://qastrod.pl/", "logo": "https://qastrod.pl/assets/qastrod-logo.jpg", "sameAs": ["https://www.youtube.com/@Qastrod", "https://www.youtube.com/user/qastrod"], "description": "Polski kanał tworzący autorskie piosenki o piłce nożnej od 2014 roku."}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Qastrod", "item": "https://qastrod.pl/"}, {"@type": "ListItem", "position": 2, "name": "Gry", "item": "https://qastrod.pl/darmowe-gry-pilkarskie"}, {"@type": "ListItem", "position": 3, "name": "Piłkarski Przekręt", "item": "https://qastrod.pl/gra/pilkarski-przekret/"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Czy Piłkarski Przekręt jest darmowy?", "acceptedAnswer": {"@type": "Answer", "text": "Tak, gra jest w pełni darmowa i działa w przeglądarce bez pobierania i rejestracji."}}, {"@type": "Question", "name": "Czy zagram na telefonie?", "acceptedAnswer": {"@type": "Answer", "text": "Nie, gra wymaga klawiatury i myszy. Zagraj na komputerze."}}, {"@type": "Question", "name": "Czy gra zapisuje postęp?", "acceptedAnswer": {"@type": "Answer", "text": "Tak, automatycznie po każdej misji, w tej przeglądarce."}}, {"@type": "Question", "name": "Ile trwa fabuła?", "acceptedAnswer": {"@type": "Answer", "text": "Prolog i 29 misji w pięciu aktach, z dwoma zakończeniami. Po fabule zostaje tryb swobodny."}}, {"@type": "Question", "name": "Co gra w radiu?", "acceptedAnswer": {"@type": "Answer", "text": "Qastrod Radio: 54 piosenki Qastrod na czterech stacjach."}}]}, {"@context": "https://schema.org", "@type": ["VideoGame", "WebApplication"], "name": "Piłkarski Przekręt", "url": "https://qastrod.pl/gra/pilkarski-przekret/", "description": "Darmowa piłkarska gra akcji w stylu GTA w przeglądarce: otwarte miasto, mecze na orlikach, pościgi, 29 misji i dwa zakończenia.", "inLanguage": "pl", "image": "https://qastrod.pl/gra/pilkarski-przekret/okladka-1280x720.webp", "screenshot": ["https://qastrod.pl/gra/pilkarski-przekret/zrzut-1.webp", "https://qastrod.pl/gra/pilkarski-przekret/zrzut-2.webp", "https://qastrod.pl/gra/pilkarski-przekret/zrzut-3.webp", "https://qastrod.pl/gra/pilkarski-przekret/zrzut-4.webp"], "genre": ["Gra piłkarska", "Gra akcji", "Otwarty świat"], "gamePlatform": "Przeglądarka internetowa (komputer)", "playMode": "SinglePlayer", "applicationCategory": "GameApplication", "operatingSystem": "Windows, macOS, Linux (przeglądarka)", "isAccessibleForFree": true, "author": {"@type": "Organization", "name": "Qastrod", "url": "https://qastrod.pl/"}, "publisher": {"@type": "Organization", "name": "Qastrod", "url": "https://qastrod.pl/"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "PLN", "availability": "https://schema.org/InStock"}}]</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FC6GG0YTBX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-FC6GG0YTBX');</script>
+</head>
+<body>
+<a class="skip" href="#main">Przejdź do treści</a>
+<header class="site"><div class="wrap"><nav class="nav" aria-label="Menu główne">
+<a class="logo" href="/"><img src="/assets/qastrod-mark.jpg" alt="Logo kanału Qastrod" width="58" height="58"><span class="wm"><b>QA<i>STROD</i></b><span class="lt">Piosenki piłkarskie</span></span></a>
+<button class="burger" aria-label="Menu" aria-expanded="false">&#9776;</button>
+<ul><li><a href="/piosenki-pilkarskie">Piosenki</a></li><li><a href="/najlepsze-piosenki-pilkarskie">Ranking</a></li><li><a href="/najnowsze-piosenki-pilkarskie">Najnowsze</a></li><li><a href="/darmowe-gry-pilkarskie" class=hot>Gry</a></li><li class="m-only"><a href="https://www.youtube.com/channel/UC_JOF8BvyDixr_riXVryqkQ/join" target="_blank" rel="noopener">&#9749; Postaw mi kawę</a></li></ul>
+<a class="btn coffee" href="https://www.youtube.com/channel/UC_JOF8BvyDixr_riXVryqkQ/join" target="_blank" rel="noopener"><span class="cup">&#9749;</span>Postaw mi kawę</a>
+</nav></div></header>
+<main id="main"><div class="wrap"><nav class="bc" aria-label="Okruszki"><a href="/">Qastrod</a><span>&rsaquo;</span><a href="/darmowe-gry-pilkarskie">Gry</a><span>&rsaquo;</span><span>Piłkarski Przekręt</span></nav></div>
+<section class="tight" style="padding-top:0"><div class="wrap">
+<div class="pp-head"><h1>Piłkarski Przekręt: <em>darmowa gra piłkarska w stylu GTA</em></h1>
+<p>Piłkarski Przekręt to darmowa gra piłkarska online w otwartym mieście. Grasz w przeglądarce, bez pobierania i bez rejestracji. Biegasz z piłką przy nodze po Karniewie, grasz mecze na orlikach, uciekasz autem przed pościgiem i odkręcasz przekręt prezesa Barona.</p></div>
+<div class="game-box" id="gameBox">
+<img src="/gra/pilkarski-przekret/okladka-1280x720.webp" width="1280" height="720" alt="Piłkarski Przekręt: Dycha z numerem 10 na tle miasta, prezes Baron, stadion i walizka pieniędzy" fetchpriority="high">
+<button type="button" id="playBtn">&#9654;&nbsp; Graj za darmo</button>
+<p class="game-mob">Gra działa na komputerze z klawiaturą i myszą. Zapisz link i zagraj na komputerze.</p>
+</div>
+<p class="game-note" id="gameNote">Pierwsze wczytanie ok. 130 MB. Potrzebna klawiatura i mysz.</p>
+<div class="pp-tools" id="ppTools" hidden><button type="button" class="btn green" id="fsBtn">Pełny ekran</button><a class="btn ghost" href="/gra/pilkarski-przekret/play/" target="_blank" rel="noopener">Otwórz w nowej karcie</a></div>
+</div></section>
+
+<section class="alt"><div class="wrap"><div class="sec-head"><h2>O <span class="kick">grze</span></h2></div><div class="pp-txt">
+<p>Piłkarski Przekręt to piłkarska gra akcji z fabułą, w stylu starych GTA, z widokiem zza pleców bohatera. Kapitan Zrywu Karniewo, „Dycha”, zostaje wrobiony w ustawienie finału pucharu i dożywotnio zdyskwalifikowany. Rok później wraca, żeby odzyskać orlik, oczyścić imię i rozbić układ, który tworzą prezes Baron, sędzia Kalosz, działacz Kiełbasa i komendant Pała.</p>
+<p>Fabuła to prolog i 29 misji w 5 aktach. Gra ma dwa różne zakończenia: wyjazd do wielkiego klubu albo zostanie w Zrywie. W mieście spotkasz trenera Zbyszka, Sebę, bramkarza-filozofa Pająka, Szybkiego Lolo, Nikolę od social mediów, panią Krysię z kiosku i mechanika Heńka.</p>
+<p>Akcja toczy się w mieście Karniewo. Na mapie są między innymi Osiedle Tysiąclecia, Stare Miasto, Centrum, Port, Wólka Karna, Kozia Wólka, rzeka Barka z mostami, rondo i Baron Arena. To gra piłkarska po polsku: gra jak GTA, ale z piłką, orlikami i klubem z okręgówki.</p>
+</div></div></section>
+
+<section class="tight"><div class="wrap"><div class="sec-head"><h2>Jak <span class="kick">grać</span></h2></div><div class="pp-txt">
+<p>Sterujesz klawiaturą i myszą. Klawisze WASD to bieg i jazda autem, mysz obraca kamerę i celuje. Lewy przycisk myszy to strzał: im dłużej go trzymasz, tym mocniej kopniesz. Telefon pod klawiszem B otwiera kiosk, trening, klub, garaż, dług i listę boisk. Postęp zapisuje się automatycznie w przeglądarce, więc tę grę piłkarską w przeglądarce można przerwać i wrócić do niej później.</p>
+</div>
+<table class="pp-keys"><caption class="skip">Sterowanie w grze Piłkarski Przekręt</caption><thead><tr><th scope="col">Klawisz</th><th scope="col">Działanie</th></tr></thead><tbody><tr><th scope="row">WASD</th><td>bieg / jazda</td></tr><tr><th scope="row">Mysz</th><td>kamera i celowanie</td></tr><tr><th scope="row">LPM</th><td>strzał (przytrzymaj = siła), użycie sprzętu</td></tr><tr><th scope="row">PPM / C</th><td>wślizg, w meczu podanie</td></tr><tr><th scope="row">Spacja</th><td>skok, w aucie hamulec ręczny</td></tr><tr><th scope="row">Shift</th><td>sprint / nitro</td></tr><tr><th scope="row">F / E</th><td>wsiądź / wysiądź</td></tr><tr><th scope="row">TAB</th><td>koło sprzętu</td></tr><tr><th scope="row">Q</th><td>żonglerka</td></tr><tr><th scope="row">T</th><td>strzał specjalny (w meczu)</td></tr><tr><th scope="row">R</th><td>reset misji (potwierdź Enter)</td></tr><tr><th scope="row">B</th><td>telefon (kiosk, trening, klub, garaż, dług, boiska)</td></tr><tr><th scope="row">M / P / Esc</th><td>mapa i pauza</td></tr><tr><th scope="row">G / X / V</th><td>w aucie: stacja radia / następna piosenka / radio wł./wył.</td></tr></tbody></table>
+</div></section>
+
+<section class="alt"><div class="wrap"><div class="sec-head"><h2>Co jest <span class="kick">w grze</span></h2></div>
+<div class="facts" style="margin-top:20px"><div class="fact"><h3>Fabuła</h3><p>Prolog i 29 misji w 5 aktach. Dwa różne zakończenia: wyjazd do wielkiego klubu albo zostanie w Zrywie.</p></div><div class="fact"><h3>Piłka</h3><p>Mecze 2 na 2 i 3 na 3, rzuty karne, rzuty wolne i żonglerka.</p></div><div class="fact"><h3>Akcja</h3><p>Wyścigi, pościgi autem, skradanie, obrona boiska i zadyma w stroju maskotki.</p></div><div class="fact"><h3>12 boisk do przejęcia</h3><p>Każde przejęte boisko daje dochód co minutę.</p></div><div class="fact"><h3>Sprzęt</h3><p>Piłka, wuwuzela, skórki od banana, race dymne, czerwone kartki i piłki-petardy.</p></div><div class="fact"><h3>Rozwój</h3><p>Trening, ulepszenia klubu, garaż aut, spłata długu u Barona i kreator wyglądu postaci.</p></div></div>
+</div></section>
+
+<section class="tight"><div class="wrap"><div class="sec-head"><h2>Qastrod Radio <span class="kick">w grze</span></h2></div><div class="pp-txt">
+<p>W aucie gra Qastrod Radio: 54 piosenki Qastrod na 4 stacjach. Stację zmieniasz klawiszem G, następną piosenkę włączasz klawiszem X, a radio wyłączasz klawiszem V. Poniżej wybrane utwory z każdej stacji z linkami do teledysków na YouTube. Cały zbiór jest w <a href="/piosenki-pilkarskie">katalogu piosenek piłkarskich</a>, a seria mundialowa na stronie <a href="/piosenki-mundialowe-2026">piosenki mundialowe 2026</a>.</p>
+</div>
+<div class="pp-radio"><div class="pp-st"><h3>KADRA FM</h3><small>reprezentacja Polski</small><ul><li><a href="https://www.youtube.com/watch?v=aEr7BONjpGM" target="_blank" rel="noopener">Przełamanie</a></li><li><a href="https://www.youtube.com/watch?v=6yxaR3YGWKs" target="_blank" rel="noopener">Każdy mecz to walka</a></li><li><a href="https://www.youtube.com/watch?v=6wTp56zMe94" target="_blank" rel="noopener">3:00 w nocy (piosenka polskiego kibica)</a></li><li><a href="https://www.youtube.com/watch?v=YH6wftVSKyE" target="_blank" rel="noopener">Najlepsza jedenastka w historii Polski</a></li></ul></div><div class="pp-st"><h3>MUNDIAL 2026</h3><small>kibicuję obcym i wielki finał</small><ul><li><a href="https://www.youtube.com/watch?v=dYckmMM5A74" target="_blank" rel="noopener">Kibicuję obcym: Norwegia</a></li><li><a href="https://www.youtube.com/watch?v=UaHQ8BN2QxI" target="_blank" rel="noopener">Kibicuję obcym: Argentyna</a></li><li><a href="https://www.youtube.com/watch?v=glEcjWsYH30" target="_blank" rel="noopener">Ma 19 lat i wygrał Mundial (Lamine Yamal)</a></li><li><a href="https://www.youtube.com/watch?v=Ld94qPgWPSA" target="_blank" rel="noopener">Najlepsza drużyna Mundialu 2026</a></li></ul></div><div class="pp-st"><h3>LEGENDY</h3><small>Lewy, Messi, Ronaldo, Porto i spółka</small><ul><li><a href="https://www.youtube.com/watch?v=Leuq81VKV-E" target="_blank" rel="noopener">Tęsknię za Messim w Barcelonie</a></li><li><a href="https://www.youtube.com/watch?v=ntlYWBWldLI" target="_blank" rel="noopener">Tęsknię za Ronaldo w Realu</a></li><li><a href="https://www.youtube.com/watch?v=dVzPBIAyNn8" target="_blank" rel="noopener">Lewandowski w Chicago Fire</a></li><li><a href="https://www.youtube.com/watch?v=pFZNHBbdMpw" target="_blank" rel="noopener">Polskie Porto mistrzami</a></li></ul></div><div class="pp-st"><h3>MOTYWACJA</h3><small>od orlika na stadion</small><ul><li><a href="https://www.youtube.com/watch?v=AfALsHrQ1zo" target="_blank" rel="noopener">Pasja (Oni też kiedyś byli mali)</a></li></ul></div></div>
+</div></section>
+
+<section class="alt"><div class="wrap"><div class="sec-head"><h2><span class="kick">Wymagania</span></h2></div>
+<ul class="pp-req"><li><b>Komputer z klawiaturą i myszą</b>Na telefonie i tablecie nie da się w nią grać.</li><li><b>Nowoczesna przeglądarka</b>Darmowa gra przeglądarkowa 3D o piłce nożnej. Bez pobierania i bez rejestracji.</li><li><b>Pierwsze wczytanie ok. 130 MB</b>W pliku jest cała gra i 54 piosenki Qastrod Radio.</li></ul>
+</div></section>
+
+<section class="tight"><div class="wrap"><div class="sec-head"><h2>Najczęstsze <span class="kick">pytania</span></h2></div>
+<div class="pp-faq"><h3>Czy Piłkarski Przekręt jest darmowy?</h3><p>Tak, gra jest w pełni darmowa i działa w przeglądarce bez pobierania i rejestracji.</p><h3>Czy zagram na telefonie?</h3><p>Nie, gra wymaga klawiatury i myszy. Zagraj na komputerze.</p><h3>Czy gra zapisuje postęp?</h3><p>Tak, automatycznie po każdej misji, w tej przeglądarce.</p><h3>Ile trwa fabuła?</h3><p>Prolog i 29 misji w pięciu aktach, z dwoma zakończeniami. Po fabule zostaje tryb swobodny.</p><h3>Co gra w radiu?</h3><p>Qastrod Radio: 54 piosenki Qastrod na czterech stacjach.</p></div>
+</div></section>
+
+<section class="alt"><div class="wrap"><div class="sec-head"><h2>Zrzuty <span class="kick">z gry</span></h2></div>
+<div class="pp-shots"><img src="/gra/pilkarski-przekret/zrzut-1.webp" alt="Piłkarski Przekręt: miasto Karniewo widziane z góry, kamienice, wieżowce i skrzyżowania" width="1280" height="720" loading="lazy"><img src="/gra/pilkarski-przekret/zrzut-2.webp" alt="Piłkarski Przekręt: prolog, czerwone auto pędzi ulicą Karniewa na Baron Arenę" width="1280" height="720" loading="lazy"><img src="/gra/pilkarski-przekret/zrzut-3.webp" alt="Piłkarski Przekręt: otwarte miasto Karniewo, osiedle, ulice i park" width="1280" height="720" loading="lazy"><img src="/gra/pilkarski-przekret/zrzut-4.webp" alt="Piłkarski Przekręt: jazda autem przez miasto, widok zza auta" width="1280" height="720" loading="lazy"></div>
+</div></section>
+
+<section class="tight"><div class="wrap"><div class="sec-head"><h2>Więcej <span class="kick">gier Qastrod</span></h2><p>Pozostałe darmowe gry piłkarskie na Qastrod.pl.</p></div>
+<div class="linkgrid" style="margin-top:18px"><a href="/gra-kariera-pilkarza">Zostań piłkarzem</a><a href="/gra-symulator-trenera">Symulator trenera w polskiej lidze</a><a href="/gra-symulator-selekcjonera">Symulator selekcjonera reprezentacji Polski</a><a href="/gra-zgadnij-piosenke">Zgadnij piosenkę</a><a href="/gra-rzuty-karne">Rzuty karne</a><a href="/gra-glowkami">1v1 Główkami</a><a href="/gra-lowca-talentow">Łowca talentów</a><a href="/gra-wykop-na-ksiezyc">Wykop na Księżyc</a><a href="/gra-one-click-goal">Symulator mundialu</a><a href="/darmowe-gry-pilkarskie">Wszystkie darmowe gry piłkarskie</a></div>
+</div></section>
+</main>
+<footer class="site"><div class="wrap"><div class="fgrid">
+<div><a class="logo" href="/" style="margin-bottom:14px"><img src="/assets/qastrod-mark.jpg" alt="Logo Qastrod" width="58" height="58"><span class="wm"><b>QA<i>STROD</i></b><span class="lt">Piosenki piłkarskie</span></span></a>
+<p style="color:#a9bee3;font-size:16px;margin:0">Największa polska kolekcja piosenek o piłce nożnej. 315 autorskich utworów i 14,3 mln odtworzeń, nieprzerwanie od 2014 roku.</p></div>
+<div><h4>Piosenki</h4><ul><li><a href="/piosenki-pilkarskie">Wszystkie piosenki</a></li><li><a href="/najnowsze-piosenki-pilkarskie">Najnowsze piosenki</a></li><li><a href="/najlepsze-piosenki-pilkarskie">Ranking TOP 50</a></li><li><a href="/wyszukiwarka-piosenek-pilkarskich">Wyszukiwarka</a></li><li><a href="/piosenki-mundialowe-2026">Mundial 2026</a></li></ul></div><div><h4>Kategorie</h4><ul><li><a href="/darmowe-gry-pilkarskie">Gry piłkarskie</a></li><li><a href="/hymny-pilkarskie-po-polsku">Hymny klubowe</a></li><li><a href="/rap-battle-pilkarski">Rap Battle</a></li><li><a href="/piosenki-o-polskich-pilkarzach">Polscy piłkarze</a></li><li><a href="/piosenki-o-legendach-futbolu">Legendy futbolu</a></li><li><a href="/piosenki-o-klubach-pilkarskich">Kluby</a></li><li><a href="/shorty-pilkarskie">Shorty</a></li></ul></div><div><h4>Gwiazdy</h4><ul><li><a href="/piosenki-o-messim">Messi</a></li><li><a href="/piosenki-o-ronaldo">Ronaldo</a></li><li><a href="/piosenki-o-lewandowskim">Lewandowski</a></li><li><a href="/piosenki-o-mbappe">Mbappé</a></li><li><a href="/piosenki-o-lamine-yamalu">Lamine Yamal</a></li><li><a href="/o-kanale">O kanale</a></li><li><a href="/mapa-strony">Mapa strony</a></li></ul></div></div>
+<div class="fbot"><span>&copy; 2026 Qastrod &middot; Strona współtworzona przez Krzysztofa Sołtysa i Gabrielę Sołtys</span>
+<span><a href="https://www.youtube.com/@Qastrod" target="_blank" rel="noopener">YouTube</a> &middot; <a href="/o-kanale">O kanale</a> &middot; <a href="/piosenki-pilkarskie">Katalog</a></span></div>
+</div></footer>
+
+<script>
+(function(){
+  var box=document.getElementById('gameBox'),btn=document.getElementById('playBtn'),tools=document.getElementById('ppTools'),fs=document.getElementById('fsBtn');
+  var desktop=!window.matchMedia||window.matchMedia('(hover:hover) and (pointer:fine)').matches;
+  if(!desktop){box.className+=' mob';return;}
+  var frame=null;
+  btn.addEventListener('click',function(){
+    var f=document.createElement('iframe');
+    f.src='/gra/pilkarski-przekret/play/';
+    f.title='Piłkarski Przekręt, gra';
+    f.allow='fullscreen; autoplay; pointer-lock';
+    f.setAttribute('allowfullscreen','');
+    box.innerHTML='';
+    box.className+=' on';
+    box.appendChild(f);
+    frame=f;
+    tools.hidden=false;
+    try{f.focus();}catch(e){}
+    box.scrollIntoView({block:'center'});
+  });
+  fs.addEventListener('click',function(){
+    if(!frame)return;
+    var r=frame.requestFullscreen||frame.webkitRequestFullscreen;
+    if(r)r.call(frame);
+    try{frame.focus();}catch(e){}
+  });
+})();
+</script>
+<script src="/assets/data.js?v=b8a99760"></script>
+<script src="/assets/app.js?v=b8a99760"></script>
+</body></html>
