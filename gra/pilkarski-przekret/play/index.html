@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<link rel="canonical" href="https://qastrod.pl/gra/pilkarski-przekret/">
+<meta name="robots" content="noindex, follow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Piłkarski Przekręt | Qastrod</title>
+<meta name="theme-color" content="#0b0710">
+<style>
+html,body{margin:0;height:100%;background:#0b0710;color:#fff;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+#pp{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:24px;text-align:center}
+#pp h1{margin:0;font:900 clamp(26px,5vw,46px)/1 Impact,"Arial Narrow Bold","Arial Black",sans-serif;letter-spacing:.03em;text-transform:uppercase;color:#ffcc33}
+#pp p{margin:0;font-size:15px;color:#cfc6dc}
+#pp-bar{width:min(460px,80vw);height:14px;border-radius:999px;background:#241a33;overflow:hidden}
+#pp-fill{width:0;height:100%;background:linear-gradient(90deg,#ff3d9a,#ffcc33);transition:width .2s}
+#pp-pct{font:800 22px/1 system-ui,sans-serif}
+#pp button{font:800 16px/1 system-ui,sans-serif;padding:14px 26px;border:0;border-radius:12px;background:#ffcc33;color:#111;cursor:pointer}
+</style>
+</head>
+<body>
+<div id="pp">
+<h1>Piłkarski Przekręt</h1>
+<div id="pp-bar"><div id="pp-fill"></div></div>
+<div id="pp-pct">0%</div>
+<p id="pp-msg">Wczytywanie gry. Pierwsze wczytanie to ok. 130 MB, kolejne są szybsze.</p>
+<noscript><p>Do gry potrzebna jest włączona obsługa JavaScript.</p></noscript>
+</div>
+<script>
+/* Gra jest podzielona na 7 części (GitHub nie przyjmuje plików powyżej 100 MB).
+   Ten skrypt pobiera części, skleja je w oryginalny plik gry i uruchamia go na tej stronie.
+   Po aktualizacji gry: podmień pliki czesc-0X.txt i zwiększ WERSJA. */
+(function(){
+  var WERSJA='1', CZESCI=7, ROZMIAR=133963148, NARAZ=3;
+  var fill=document.getElementById('pp-fill'), pct=document.getElementById('pp-pct'), msg=document.getElementById('pp-msg');
+  var parts=new Array(CZESCI), got=0, next=0, done=0, failed=false;
+
+  function progress(){
+    var p=Math.min(100,Math.floor(got/ROZMIAR*100));
+    fill.style.width=p+'%'; pct.textContent=p+'%';
+  }
+  function fail(){
+    if(failed)return; failed=true;
+    msg.textContent='Nie udało się wczytać gry. Sprawdź połączenie z internetem.';
+    var b=document.createElement('button'); b.type='button'; b.textContent='Spróbuj ponownie';
+    b.onclick=function(){location.reload();};
+    document.getElementById('pp').appendChild(b);
+  }
+  function load(i){
+    var name='czesc-'+(i<9?'0':'')+(i+1)+'.txt?v='+WERSJA;
+    return fetch(name).then(function(r){
+      if(!r.ok)throw new Error('HTTP '+r.status);
+      if(!r.body||!r.body.getReader)return r.arrayBuffer().then(function(a){got+=a.byteLength;progress();return new Uint8Array(a);});
+      var reader=r.body.getReader(), chunks=[], len=0;
+      function pump(){
+        return reader.read().then(function(x){
+          if(x.done){
+            var u=new Uint8Array(len), o=0;
+            for(var k=0;k<chunks.length;k++){u.set(chunks[k],o);o+=chunks[k].length;}
+            return u;
+          }
+          chunks.push(x.value); len+=x.value.length; got+=x.value.length; progress();
+          return pump();
+        });
+      }
+      return pump();
+    }).then(function(u){parts[i]=u;});
+  }
+  function worker(){
+    if(failed||next>=CZESCI)return Promise.resolve();
+    var i=next++;
+    return load(i).then(function(){done++;return worker();});
+  }
+  function start(){
+    msg.textContent='Uruchamianie gry…';
+    setTimeout(function(){
+      var dec=new TextDecoder('utf-8');
+      document.open();
+      for(var i=0;i<CZESCI;i++){
+        document.write(dec.decode(parts[i],{stream:i<CZESCI-1}));
+        parts[i]=null;
+      }
+      document.close();
+    },30);
+  }
+  var ws=[]; for(var w=0;w<NARAZ;w++)ws.push(worker());
+  Promise.all(ws).then(function(){if(done===CZESCI)start();else fail();}).catch(fail);
+})();
+</script>
+</body>
+</html>
