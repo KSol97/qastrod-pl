@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /gra/pilkarski-przekret/play/czesc-
 
 Sitemap: https://qastrod.pl/sitemap.xml
