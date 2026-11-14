@@ -1402,3 +1402,15 @@ html.ss-lock,html.ss-lock body{overflow:hidden;overscroll-behavior:none}
 .ss-stat em{font-style:normal;font-weight:800}.ss-stat em.z-up{color:#16d97d}.ss-stat em.z-po{color:#ffb020}.ss-stat em.z-dn{color:#ff6b81}
 
 .home-more{display:flex;justify-content:center;margin-top:30px}.home-more .btn{font-size:17px;padding:15px 30px;text-transform:uppercase;letter-spacing:.04em}
+
+/* ===== karta gry na 2 sloty (Piłkarski Przekręt) ===== */
+.gc.gc-wide{grid-column:span 2}
+.gc-wide .gc-img{aspect-ratio:16/9}
+.gc-wide .gc-b{flex:0 0 auto;flex-direction:row;align-items:center;gap:20px;padding:16px 20px}
+.gc-wide .gc-wt{flex:1;min-width:0;display:flex;flex-direction:column;gap:8px}
+.gc-wide .gc-wh{display:flex;align-items:center;flex-wrap:wrap;gap:8px 14px}
+.gc-wide .gc-b h3,.gc-wide .gc-b p{min-height:0}
+.gc-wide .gc-b h3{display:block;font-size:clamp(28px,2.6vw,36px)}
+.gc-wide .gc-f{margin-bottom:0}
+.gc-wide .gc-btn{margin-top:0;flex:0 0 auto;padding:15px 26px;font-size:16px;white-space:nowrap}
+@media(max-width:620px){.gc.gc-wide{grid-column:auto}.gc-wide .gc-b{flex-direction:column;align-items:stretch;gap:14px;padding:18px 18px 20px}.gc-wide .gc-wh{flex-direction:column;align-items:flex-start}.gc-wide .gc-b h3{font-size:26px}.gc-wide .gc-btn{padding:12px;font-size:15px}}
